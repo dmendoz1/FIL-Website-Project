@@ -1,0 +1,65 @@
+.img-lg {
+	width: 100%;
+}
+
+div.team-img {
+    border: 1px solid #ccc;
+    margin: 5px;
+    height: 350px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+.individual-img {
+	width: 200px;
+	height: 200px;
+}
+
+div.team-img img {
+    width: 100%;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+.students-block {
+    @include border-radius(5px);
+    background-color: lighten($main-red, 55%);
+    padding: 20px;
+    margin: 10px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

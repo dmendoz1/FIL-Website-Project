@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+	.modal-dialog {
+	}
+}
+
+.modal-content {
+	background: $background-color;
+}
+
+.btn-container {
+	margin-top: 15px;
+}
+
+.home-blocks {
+	@include border-radius(5px);
+	background-color: lighten($main-red, 58%);
+	margin-bottom: 10px;
+	padding: 20px;
+}

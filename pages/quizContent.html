@@ -1,0 +1,66 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="intro" ng-show="!inProgress">
+			<h3> Please choose from the following four categories to begin the quiz!</h3>
+		</div>
+	</div>
+</div>
+<div class="row" ng-show="!hideCategories">
+	<div class="col-md-6">
+		<div data-ng-init="frugalId='frugal';">
+			<div class="category-block" id="frugal-btn" ng-click="start(frugalId)">
+				<h1>FIL Frugal</h1>
+			</div>
+		</div>
+		<div data-ng-init="historyId='history';">
+			<div class="category-block" id="history-btn" ng-click="start(historyId)">
+				<h1>FIL History </h1>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div data-ng-init="mobileId='mobile';">
+			<div class="category-block" id="mobile-btn" ng-click="start(mobileId)">
+				<h1>FIL Mobile Lab </h1>
+			</div>
+		</div>
+		<div data-ng-init="geographyId='geography';">
+			<div class="category-block" id="geo-btn" ng-click="start(geographyId)">
+				<h1>FIL Geography </h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="quiz-area" ng-show="inProgress">
+			<div ng-show="!quizOver">
+				<h2 id="question">{{questionNumber}}. {{question}}</h2>
+				<ul id="options">
+					<li ng-repeat="option in options">
+						<label>
+							<h4><input type="radio" name="answer" value="{{option}}">
+							  &nbsp; {{option}}</h4>
+						</label>
+					</li>
+				</ul>
+				<button ng-click="checkAnswer()" class="btn btn-md" ng-show="answerMode">Submit</button>
+		 		<div ng-show="!answerMode">
+					<button ng-click="nextQuestion()" class="btn btn-md next-question">Next</button>
+					<div ng-show="correctAns" class="correctAnswer"><h4>That is correct!</h4></div>
+					<div ng-show="!correctAns" class="incorrectAnswer"><h4>Sorry, your answer was incorrect. The correct answer was '{{answer}}'</h4></div>
+				</div>
+				<div id="invalidAnswer" ng-show="invalidAnswer">Please select one of the options.</div>
+			</div>
+		 
+			<div ng-show="quizOver">
+				<h2 class="center">Thanks for playing!</h2>
+				<center><button class="btn btn-lg" ng-click="reset()">Back to categories</button></center>
+			</div>
+		 
+			<div id="score">
+				<h1 class="pull-right"> Score: {{score}} / 5</h1>
+			</div>
+		</div>
+	</div>
+</div>

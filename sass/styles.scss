@@ -1,0 +1,41 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+
+
+/*  HELPERS    */
+
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+/*  Components   */
+@import 'components/buttons';
+@import 'components/navigation';
+@import 'components/slideshow';
+
+
+/*    Pages  - individual pages */
+@import 'pages/home';
+@import 'pages/quiz';
+@import 'pages/team';
+@import 'pages/forum';
+@import 'pages/projects';
+
+
+
+/*   Layout   */
+@import 'layout/footer';
+
+/*  Components  */
+@import 'components/buttons';
+
+/*   Base    */
+@import 'base/reset';
+
+

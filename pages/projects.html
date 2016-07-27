@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1> Frugal Innovation Lab Projects </h1>
+			<p> The following are some of the projects that the Frugal Innovation Lab has worked on or is currently working on: </p>
+		</div>
+	</div>
+	<div class="row" projects>
+		<div class="col-md-12" ng-init="getProjects()"> 
+			<div ng-repeat="project in projects" class="project-containers">
+				<h4 class="center"> {{project.name}} </h4>
+				<p> <strong>Members:</strong> {{project.members}} </p>
+				<p> <strong>Advisors: </strong> {{project.advisors}} </p>
+				<p> <strong>Decription: </strong>{{project.description}}</p> 
+			</div>
+		</div>
+	</div>
+</div>

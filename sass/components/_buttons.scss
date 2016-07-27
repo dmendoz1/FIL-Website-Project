@@ -1,0 +1,41 @@
+.btn {
+	color: white;
+	background: $main-red;
+	border: none !important;
+	&:hover {
+		color: $white;
+		background: $main-red;
+	}
+}
+
+.btn-primary:focus, .btn-primary.focus {
+	background: none;
+	border: 1px solid $active-link !important;
+	color: $active-link;
+}
+
+.home-btn {
+	margin: 10px;
+	width: 110px;
+	border: 1px solid $main-red !important;
+	background: none;
+	color: $main-red;
+
+	&:hover {
+		background: none;
+		color: darken( $main-red, 10%);
+		border: 1px solid darken( $main-red, 10%) !important;
+	}
+}
+
+
+#startQuiz-btn {
+	width: 50%;
+	height: 100px;
+	display: none;
+}
+
+
+#forum-btn {
+	margin-top: 10px;
+}

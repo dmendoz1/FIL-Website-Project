@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="center"> Forum </h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5">
+			<div id="forum-form">
+				<h3> Ask a Question or leave a comment! </h3>
+				<form role="form" name="forumpost">
+				  <div class="form-group">
+				    <label for="name" class="required">Name: </label>
+				    <input type="text" name="name" class="form-control" id="name" ng-model="user.name" required>
+				  </div>
+				  <div class="form-group">
+				    <label for="title" class="required">Question/Title:</label>
+				    <input type="text" name="title" class="form-control" id="title" ng-model="user.title" required>
+				  </div>
+				  <div class="form-group">
+				    <label for="entry" class="required">Entry </label>
+				    <textarea class="form-control" name="entry" id="entry" ng-model="user.entry" required></textarea>
+				  </div>
+				  <div id="captcha">
+				  	<div class="g-recaptcha" data-sitekey="6Ldy-CUTAAAAAKxCjWe2VNs1gI0yti8xA0VHjHTw"></div>
+				  </div>
+				  <button type="submit" id="forum-btn" class="btn btn-default btn-lg pull-right" ng-disabled="forumpost.$invalid" ng-click="forumPost(user)">Post!</button>
+				</form>
+				<span id="post-status"> </span>
+			</div>
+		</div>
+		<div class="col-md-7">
+			<div id="forum-questions-container">
+				<h3> Browser through the post made in past by both our team as well as guests. </h3>
+				<div class="forum-entry" ng-repeat="entry in entries" ng-click="getProjects()">
+					<h4> Question / Title: {{entry.title}} </h4>
+					<h5> By: {{entry.name}} </h5>
+					<h5> Entry: {{entry.entry}} </h5>
+					<h6> Posted on {{entry.entry_time}} </h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

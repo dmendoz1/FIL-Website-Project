@@ -1,0 +1,70 @@
+
+
+.navbar {
+	background: $main-red;
+	min-height: 85px;
+	margin: 0px;
+	border-radius: 0px;
+	border: none;
+	
+}
+
+.navbar-header {
+	min-height: 85px;
+}
+
+.navbar-default .navbar-nav {
+	background: $main-red;
+	margin: 0px;
+	border-radius: 0px;
+	border: none;
+	li {
+		margin-top: 20px;
+		a {
+			color: $white;
+			font-size: 14px;
+
+			&:hover {
+				color: darken( $main-red, 10%);
+			}
+		}
+	}
+}
+
+
+#logo {
+	max-width: 250px;
+	margin-left: 5px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: darken( $main-red, 10%);
+	background-color: $main-red;
+}
+
+#toggle-btn {
+	margin-top: 25px;
+
+	.icon-bar {
+		background: $white;
+	}
+}
+
+
+.nav-align {
+	float: right;
+}
+
+@media (max-width: 768px) {
+	.nav-align {
+		float: none;
+		text-align: center;
+	}
+}
+
+#navbar-collapse {
+	background-color: $main-red;
+	z-index: 100;
+}
+
+

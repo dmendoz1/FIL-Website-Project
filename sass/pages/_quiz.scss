@@ -1,0 +1,47 @@
+.category-block {
+	@include border-radius(20px);
+	width: 80%;
+	height: 200px;
+	background-color: darken( $main-red, 15%);
+	color: $white;
+	display: block;
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-transition: background-color 0.7s; 
+  	-moz-transition: background-color 0.7s; 
+   	o-transition: background-color 0.7s; 
+   	transition: background-color 0.7s; 
+	&:hover {
+		background-color: lighten( $main-red, 5%);
+	}
+
+	h1 {
+		line-height: 200px;
+	}
+}
+
+#startQuizSection {
+	display: none;
+	background: green;
+}
+
+
+#options {
+	@include border-radius(5px);
+	background-color: lighten($main-red, 55%);
+	padding: 20px;
+
+	li {
+		list-style: none;
+	}
+}
+
+.correctAnswer {
+	color: green;
+}
+
+.incorrectAnswer {
+	color: red;
+}

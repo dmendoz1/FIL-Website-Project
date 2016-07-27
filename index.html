@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="santaclarauniversity">
+<head>
+  <meta charset="UTF-8">
+  <title>Frugal Innovation Lab</title>
+ 
+  <link rel="stylesheet" href="stylesheets/styles.css">
+ <base href="/santaclarauniv/"> 
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" id="toggle-btn" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><img src="images/logo.png" class="img img-responsive" id="logo"/> </a>
+	    </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="navbar-collapse" ng-controller="headerController">
+	      <ul class="nav navbar-nav nav-align">
+	        <li ng-class="{ active: isActive('/home')}"><a href="/santaclarauniv/home">Home</a></li>
+			<li ng-class="{ active: isActive('/projects')}"><a href="/santaclarauniv/projects">Projects</a></li>
+			<li ng-class="{ active: isActive('/forum')}"><a href="/santaclarauniv/forum">Forum</a></li>
+			<li ng-class="{ active: isActive('/quiz')}"><a href="/santaclarauniv/quiz">Quiz</a></li>
+			<li ng-class="{ active: isActive('/team')}"><a href="/santaclarauniv/team">Team</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div ng-view>
+	</div>
+
+	<footer> Frugal Innovation Lab | Bannan Labs Building 404 | 500 El Camino Real, Santa Clara, CA 95053 </footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+	<script src="javascripts/app.js"> </script>
+	<script src="javascripts/responsiveslides.min.js"></script>
+	<script src="javascripts/script.js"></script>
+	<script src="javascripts/ocLazyLoad.min.js"></script>
+	<script src="javascripts/directives.js"></script>
+	<script src="javascripts/factories.js"></script>
+</body>
+</html>
+
+

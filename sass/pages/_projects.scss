@@ -1,0 +1,6 @@
+.project-containers {
+	@include border-radius(5px);
+	background: lighten($main-red, 55%);
+	padding: 20px;
+	margin: 10px;
+}
